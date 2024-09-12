@@ -3,26 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To Do App</title>
+    <title>ToDo-List приложение</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="todo-list">
+      <div class="app-todo-list">
         <h2>
           To-do List
-          <img src="/img/logo app.png" alt="logo app" />
+          <img src="img/logo todo-list.png" alt="logo todo-list" />
         </h2>
+
         <div class="row">
           <input type="text" id="input-box" placeholder="Добавьте задачу..." />
-          <button>Добавить</button>
+          <button class="addTask-btn">Добавить</button>
         </div>
-        <ul id="list-container">
-          <li class="checked">Задача 1</li>
-          <li>Задача 2</li>
-          <li>Задача 3</li>
-          <li>Задача 3</li>
-        </ul>
+
+        <div class="list-container">
+          <ul id="list">
+            <li>
+              <span class="task-title">Задача 1</span>
+              <div class="task-item__buttons">
+                <button class="button-unchecked">
+                  <img src="img/unchecked.svg" alt="Unchecked" />
+                </button>
+                <button class="button-delete">
+                  <img src="img/delete.svg" alt="Delete" />
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>

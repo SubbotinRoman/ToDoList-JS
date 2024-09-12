@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow: hidden;
+}
+
 .container {
   width: 100%;
   min-height: 100vh;
@@ -14,25 +18,26 @@
   padding: 10px;
 }
 
-.todo-list {
+.app-todo-list {
   width: 100%;
-  max-width: 600px;
+  max-width: 700px;
   background: #fff;
-  margin: 150px auto 20px;
-  padding: 30px 50px 30px;
+  margin: 100px auto 30px;
+  padding: 50px 50px 50px;
   border-radius: 10px;
 }
 
-.todo-list h2 {
-  color: #002765;
+.app-todo-list h2 {
+  color: #982cb3;
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
   justify-content: center;
+  font-size: 35px;
 }
 
-.todo-list h2 img {
-  width: 50px;
+.app-todo-list h2 img {
+  width: 64px;
   margin-left: 10px;
 }
 
@@ -43,7 +48,7 @@
   background: #edeef0;
   border-radius: 30px;
   padding-left: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 input {
@@ -51,28 +56,43 @@ input {
   border: none;
   outline: none;
   background: transparent;
-  padding: 10px;
-  font-size: 18px;
+  padding: 15px;
+  font-size: 15px;
 }
 
-button {
+.addTask-btn {
   border: none;
   outline: none;
   padding: 20px 20px;
   background: #982cb3;
   color: #fff;
-  font-size: 17px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 50px;
   font-weight: bold;
 }
 
+.button-unchecked,
+.button-delete {
+  border: none;
+  outline: none;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+}
+
+.task-title {
+  display: flex;
+  align-items: center;
+}
+
 ul li {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   padding: 20px 12px 12px 70px;
   user-select: none;
-  cursor: pointer;
   position: relative;
 }
 
@@ -82,37 +102,27 @@ ul li::before {
   height: 28px;
   width: 28px;
   border-radius: 50%;
-  background-image: url(img/circle.svg);
   background-size: cover;
   background-position: center;
   top: 8px;
   left: 8px;
 }
 
-ul li.checked {
-  color: #555;
-  text-decoration: line-through;
-}
-
-ul li.checked::before {
-  background-image: url(img/checkbox-circle.svg);
-}
-
-#list-container {
+#list {
   counter-reset: test;
 }
 
-#list-container li::before {
+#list li::before {
   counter-increment: test;
   content: counter(test);
-  margin-right: 10px;
   background: #982cb3;
   border-radius: none;
   color: white;
   width: 50px;
   height: 50px;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 50px;
   text-align: center;
   border-radius: 30px;
+  margin-top: 20px;
 }
