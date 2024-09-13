@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ToDo-List приложение</title>
+    <link rel="stylesheet" href="css-normalize.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
     <div class="container">
       <div class="app-todo-list">
         <h2>
@@ -14,14 +16,18 @@
           <img src="img/logo todo-list.png" alt="logo todo-list" />
         </h2>
 
-        <div class="row">
-          <input type="text" id="input-box" placeholder="Добавьте задачу..." />
+        <div class="input-container">
+          <input type="text" id="input-box" placeholder="Напишите задачу..." />
           <button class="addTask-btn">Добавить</button>
         </div>
 
         <div class="list-container">
+          <li id="emptyList" class="list-group-item empty-list">
+            <img src="img/fox.svg" alt="Empty" width="170" class="mt-3">
+            <div class="empty-list__title">Список дел пуст</div>
+          </li>
           <ul id="list">
-            <li>
+            <li class="list-li">
               <span class="task-title">Задача 1</span>
               <div class="task-item__buttons">
                 <button class="button-unchecked">
@@ -34,6 +40,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </div>
     <script src="script.js"></script>
