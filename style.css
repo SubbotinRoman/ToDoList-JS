@@ -25,10 +25,28 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 500px;
+  overflow-x: hidden;
   background: #fff;
   border-radius: 10px;
   top: 50%;
   transform: translate(0, -50%);
+}
+
+.list-container {
+  max-width: 500px;
+  max-height: 500px;
+  overflow-x: hidden;
+}
+
+.app-todo-list::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 10px;
+}
+
+.list-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #982cb3;
+  border-radius: 10px;
 }
 
 .app-todo-list h2 {
@@ -91,6 +109,8 @@ input {
 .task-title {
   display: flex;
   align-items: center;
+  overflow: hidden;
+  max-width: 260px;
 }
 
 ul li {
@@ -98,9 +118,11 @@ ul li {
   justify-content: space-between;
   list-style: none;
   font-size: 18px;
-  padding: 20px 12px 12px 70px;
+  padding: 10px 10px 10px;
   user-select: none;
   position: relative;
+  overflow: hidden;
+  overflow-wrap: anywhere;
 }
 
 ul li::before {
@@ -127,6 +149,8 @@ ul li::before {
   margin: 20px;
   font-weight: 800;
   color: #982cb3;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 #emptyList {
@@ -136,6 +160,8 @@ ul li::before {
 
 .mt-3 {
   margin: 50px;
+  margin-left: 130px;
+  margin-right: 130px;
 }
 
 .none {

@@ -21,8 +21,7 @@ tasksList.addEventListener('click', doneTask);
 // 1) ФУНКЦИЯ ДОБАВЛЕНИЯ ЗАДАЧИ
 
 function addTasks(event) {
-  
-  // Отменяем перезагрузку страницы
+  // Отменяю перезагрузку страницы
   event.preventDefault();
   // Достаю текст задачи из поля ввода
   const taskText = inputBox.value;
