@@ -3,7 +3,7 @@
 ## Overview 🌟
 This is a compact and simple (__ToDo-List__) application. The user has the ability to add and delete tasks, as well as mark tasks as completed. 
 
->### [Check the Live Demo](https://subbotinroman.github.io/ToDo-List/) :point_left:
+### [Check the Live Demo](https://subbotinroman.github.io/ToDo-List/) :point_left:
 
 <img alt="ToDo-List preview" src="img/ToDo-List preview.png">
 
