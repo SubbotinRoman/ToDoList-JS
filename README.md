@@ -1,4 +1,4 @@
-# ToDo-List (HTML/CSS/JS)
+# ToDo-List (HTML / CSS / JS)
 
 ## Overview 🌟
 This is a compact and simple (__ToDo-List__) application. The user has the ability to add and delete tasks, as well as mark tasks as completed. 
